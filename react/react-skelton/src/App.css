@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #f0f3fa;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: lightcoral;
+}
+
+.header .header__primary {
+  color: white;
+}
+.container {
+  max-width: 83rem;
+  margin: 2rem auto;
+  height: 100%;
+}
+
+.content {
+  display: grid;
+  /* border: 2px solid black; */
+  gap: 2rem;
+  grid-template-columns: 2fr 1fr;
+  height: 100%;
+}
+
+.main,
+.aside {
+  height: 100%;
+  background: white;
+  padding: 2rem 1rem;
+}
+
+.main {
+  overflow-y: scroll;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+/* List styling */
+.main__list {
+  padding: 2rem 1rem;
+}
+.main__item {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: white;
+  border: 1px solid grey;
+  padding: 1.6rem 1rem;
+  border-radius: 0.6rem;
+}
+
+.main__item-title {
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: chocolate;
+}
+
+.main__item-description {
+  color: darkslategray;
+  font-size: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.margin-b-md {
+  margin-bottom: 1.2rem;
+}
+.margin-b-sm {
+  margin-bottom: 0.6rem;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+  /* width: 25rem; */
+  padding: 2rem 1.6rem;
+  border: 1px solid #efefef;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+.card__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__avatar {
+  display: inline-block;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background: #eee;
+}
+
+.header__title {
+  height: 1rem;
+  width: 30%;
+  border-radius: 12px;
+  background: #eee;
+}
+
+.card__content {
+  margin-top: 1.2rem;
+}
+
+.description {
+  height: 0.8rem;
+  border-radius: 12px;
+  background: #eee;
+  margin-top: 1rem;
+}
+
+.description--md {
+  width: 90%;
+}
+
+.description--sm {
+  width: 70%;
+}
+
+.description--lg {
+  width: 100%;
+}
+
+/* animation effects */
+
+.card__shimmer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /*   background-color: orangered; */
+  top: 0;
+  left: 0;
+  animation: loading 2s infinite;
+}
+
+.shimmer {
+  width: 50%;
+  transform: skew(-20deg);
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-150%);
+  }
+  50% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
